@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Game Over </title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    canvas {
+      border: 2px solid black;
+      max-width: 100%;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 12px 20px;
+      margin: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2> My Game </h2>
+
+  <canvas id="game" width="320" height="400">
+  </canvas>
+
+  <br>
+
+  <button onclick="moveUp()">⬆️</button>
+
+  <br>
+
+  <button onclick="moveLeft()">⬅️</button>
+  <button onclick="moveDown()">⬇️</button>
+  <button onclick="moveRight()">➡️</button>
+
+  <script>
+    const canvas = document.getElementById("game");
+    const ctx = canvas.getContext("2d");
+
+    let x = 50;
+    let y = 50;
+
+    function drawPlayer() {
+      ctx.clearRect(0, 0, 320, 400);
+
+      ctx.fillStyle = "blue";
+      ctx.fillRect(x, y, 40, 40);
+    }
+
+    function moveRight() {
+      x = x + 10;
+      drawPlayer();
+      
+    }
+
+    function moveLeft() {
+      x = x - 10;
+      drawPlayer();
+    }
+
+    function moveUp() {
+      y = y - 10;
+      drawPlayer();
+    }
+
+    function moveDown() {
+      y = y + 10;
+      drawPlayer();
+    }
+
+    drawPlayer();
+  </script>
+
+</body>
+    </html>
+    
