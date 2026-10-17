@@ -46,14 +46,14 @@
 
       let x = 15;
       let y = 50;
-
+// main Fu 
       function drawPlayer() {
          ctx.clearRect(0, 0, 320, 400);
 
          ctx.fillStyle = "blue";
          ctx.fillRect(x, y, 40, 40);
       }
-
+// move right 
       function moveRight() {
          if (x+10 <= 280) {
             x = x + 10;
@@ -61,28 +61,28 @@
          drawPlayer();
 
       }
-
+// move left 
       function moveLeft() {
          if (x-10 >=0) {
             x = x - 10;
          }
          drawPlayer();
       }
-
+// move up 
       function moveUp() {
          if (y-10 >= 0 ) {
             y = y - 10;
          }
          drawPlayer();
       }
-
+// move down 
       function moveDown() {
          if (y+10 <= 360) {
             y = y + 10;
          }
          drawPlayer();
       }
-
+// run main Fn 
       drawPlayer();
    </script>
 
