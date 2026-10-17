@@ -55,7 +55,7 @@
       }
 
       function moveRight() {
-         if (x < 280) {
+         if (x+10 <= 280) {
             x = x + 10;
          }
          drawPlayer();
@@ -63,21 +63,21 @@
       }
 
       function moveLeft() {
-         if (x >= 10) {
+         if (x-10 >=0) {
             x = x - 10;
          }
          drawPlayer();
       }
 
       function moveUp() {
-         if (y >= 4) {
+         if (y-10 >= 0 ) {
             y = y - 10;
          }
          drawPlayer();
       }
 
       function moveDown() {
-         if (y <= 350) {
+         if (y+10 <= 360) {
             y = y + 10;
          }
          drawPlayer();
